@@ -25,15 +25,26 @@ namespace LAB8
             {
                 Panel panel_contain = new Panel();
                 Label label_name = new Label();
+
                 Label label_id = new Label();
                 Label label_owner= new Label();
-                label_name.Text = store.Name;
-                label_id.Text = store.ID;
-                label_owner.Text = store.Owner;
+                label_name.Text = "Name: " + store.Name;
+                label_id.Text = "ID: "+ store.ID;
+                label_owner.Text ="Owner: "+ store.Owner;
 
-                panel_contain.Controls.Add(label_name);
+                label_name.ForeColor = Color.DarkOrange;
+                //label_name.Font.Size = Convert.ToUInt32(11.0);
+                label_name.Dock = DockStyle.Left;
+                panel_contain.Controls.Add(label_name) ;
+
+                label_id.ForeColor = Color.DarkOrange;
+                label_id.Dock = DockStyle.Left;
                 panel_contain.Controls.Add(label_id);
-                panel_contain.Controls.Add(label_name);
+
+                label_owner.ForeColor = Color.DarkOrange;
+                label_owner.Dock = DockStyle.Left;
+                panel_contain.Controls.Add(label_owner);
+
                 panel_contain.Dock = DockStyle.Top;
                 panel_contain.BackColor = Color.FromArgb(0, 0, 0, 0);
 
